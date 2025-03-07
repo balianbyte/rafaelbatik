@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Batik by Ratna Widjojo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .hero img, .section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .language-toggle {
+            margin-top: 20px;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <img src="batik-banner.jpg" alt="Rafael Batik Banner">
+        </div>
+        <div class="section">
+            <h2 id="headline">Pilih Kain Batik Anda, Semua Dibuat Secara Eksklusif</h2>
+            <p id="description">Setiap kain Batik kami dibuat dengan penuh dedikasi dan dapat disesuaikan dengan keinginan Anda.</p>
+            <img src="batik-fabric.jpg" alt="Batik Fabric">
+        </div>
+        <div class="section">
+            <h2 id="tailor">Pengrajin Profesional</h2>
+            <p id="tailor-desc">Kami menyediakan layanan tailor-made dengan kualitas terbaik.</p>
+            <img src="batik-tailor.jpg" alt="Tailor Working on Batik">
+        </div>
+        <div class="contact">
+            <p id="contact-text">Hubungi: Ratna Y. Widjojo</p>
+            <a href="https://wa.me/62811811859" class="whatsapp-button">Chat via WhatsApp</a>
+        </div>
+        <p class="language-toggle" onclick="toggleLanguage()">English</p>
+    </div>
+    <script>
+        let language = "id";
+        function toggleLanguage() {
+            if (language === "id") {
+                document.getElementById("headline").textContent = "Choose Your Batik Cloth, All Made Exclusively";
+                document.getElementById("description").textContent = "Each Batik fabric is crafted with dedication and can be customized to your needs.";
+                document.getElementById("tailor").textContent = "Professional Tailors";
+                document.getElementById("tailor-desc").textContent = "We provide tailor-made services with the best quality.";
+                document.getElementById("contact-text").textContent = "Contact: Ratna Y. Widjojo";
+                document.querySelector(".language-toggle").textContent = "Bahasa Indonesia";
+                language = "en";
+            } else {
+                document.getElementById("headline").textContent = "Pilih Kain Batik Anda, Semua Dibuat Secara Eksklusif";
+                document.getElementById("description").textContent = "Setiap kain Batik kami dibuat dengan penuh dedikasi dan dapat disesuaikan dengan keinginan Anda.";
+                document.getElementById("tailor").textContent = "Pengrajin Profesional";
+                document.getElementById("tailor-desc").textContent = "Kami menyediakan layanan tailor-made dengan kualitas terbaik.";
+                document.getElementById("contact-text").textContent = "Hubungi: Ratna Y. Widjojo";
+                document.querySelector(".language-toggle").textContent = "English";
+                language = "id";
+            }
+        }
+    </script>
+</body>
+</html>
